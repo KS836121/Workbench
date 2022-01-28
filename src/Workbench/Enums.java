@@ -25,36 +25,34 @@ class DayWeather {
         this.temp = t;
     }
 
-    public String toString() {
-        return "...w " + day + " było " + weather + " oraz " + temp;
-    }
+        public String toString() {
+            return "...w " + day + " było " + weather + " oraz " + temp;
+        }
 
-    public Weather getWeather() { return weather; }
+        public Weather getWeather() { return weather; }
 }
 
 
 public class Enums {
     public static void main(String[] args) {
-/// 1
+//---------- 1
         for (DayOfWeek d : DayOfWeek.values()) {
             System.out.print(d+ ", ");
         }
-/// 2
-        enum Szukaj { CIEPŁO, ZIMNO };
+//---------- 2
+        //enum Temp {ZIMNO, CIEPŁO}
+        Temp temp = Temp.CIEPŁO;
 
-        Szukaj stan = Szukaj.CIEPŁO;
-
-        switch(stan) {
+        switch(temp) {
             case ZIMNO  : System.out.println("\n Jest zimno"); break;
             case CIEPŁO : System.out.println("\n Jest ciepło"); break;
         }
-
-/// 3
+//---------- 3
         DayWeather dw = new DayWeather(DayOfWeek.CZWARTEK, Weather.SŁONECZNIE, Temp.CIEPŁO);
         System.out.println(dw);
 
+//---------- 4
         // Elementy enumeracji są obiektami-singletonami, możemy używać operatora ==
-/// 4
         if (dw.getWeather() == Weather.DESZCZOWO) {
             System.out.println(" Był deszcz");
         } else {
