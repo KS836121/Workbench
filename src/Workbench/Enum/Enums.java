@@ -1,4 +1,4 @@
-package Workbench;
+package Workbench.Enum;
 
 enum DayOfWeek {
     PONIEDZIAŁEK, WTOREK, SRODA, CZWARTEK, PIĄTEK, SOBOTA, NIEDZIELA

@@ -1,4 +1,4 @@
-package Workbench;
+package Workbench.Enum;
 
 public class Enum2 {
 
@@ -14,10 +14,6 @@ public class Enum2 {
         }
     }
 //----------
-//    public static String czyLadny(KolorEnum kolorEnum) {
-//        return ("Kolor " + kolorEnum + " jest " + ( (kolorEnum.ladny) ? "ładny" : "brzydki" ) );
-//    }
-
     public static String czyLadny(KolorEnum kolorEnum) {
 
         String czyLadny;
@@ -28,10 +24,21 @@ public class Enum2 {
         }
         return ("Kolor " + kolorEnum + " jest " + czyLadny);
     }
+
+//    public static String czyLadny(KolorEnum kolorEnum) {
+//        return ("Kolor " + kolorEnum + " jest " + ( (kolorEnum.ladny) ? "ładny" : "brzydki" ) );
+//    }
 //----------
     public static void main(String[] args) {
-        System.out.println( czyLadny(KolorEnum.CZERWONY) );
+
+        KolorEnum kolor = Enum2.KolorEnum.CZERWONY;
+        System.out.println( czyLadny(kolor) );
+
         System.out.println( czyLadny(KolorEnum.ZIELONY) );
         System.out.println( czyLadny(KolorEnum.NIEBIESKI) );
+
+        for(KolorEnum kolor2: KolorEnum.values()) {
+            System.out.println(czyLadny(kolor2));
+        }
     }
 }
